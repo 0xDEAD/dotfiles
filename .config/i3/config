@@ -159,8 +159,7 @@ bindsym $mod+r mode "resize"; $exec_red_screen;
 # finds out, if available)
 bar {
         #status_command i3status
-        #status_command /home/matthias/src/tools/bumblebee-status/bumblebee-status -m title cpu memory nic docker_ps sensors nvidiagpu pasink pasource weather datetime gmail -p memory.format="{used}" nic.states="^down" time.format="%H:%M" weather.showcity=false nvidiagpu.format="{temp}°C" datetime.format="%d.%m %H:%M" -t gruvbox-powerline-light
-        status_command /home/matthias/src/tools/bumblebee-status/bumblebee-status -m title cpu memory nic docker_ps sensors nvidiagpu pasink pasource weather datetime -p memory.format="{used}" nic.states="^down" time.format="%H:%M" weather.showcity=false nvidiagpu.format="{temp}°C" datetime.format="%d.%m %H:%M" -t gruvbox-powerline-light
+        status_command /home/matthias/src/tools/bumblebee-status/bumblebee-status -m title cpu memory nic docker_ps sensors nvidiagpu pasink pasource weather datetime gmail -p memory.format="{used}" nic.states="^down" time.format="%H:%M" weather.showcity=false nvidiagpu.format="{temp}°C" datetime.format="%d.%m %H:%M" -t gruvbox-powerline-light
 	position bottom
 }
 
