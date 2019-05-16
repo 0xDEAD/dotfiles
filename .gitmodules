@@ -1,3 +1,6 @@
 [submodule ".yadm/oh-my-zsh"]
 	path = .yadm/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".yadm/bumblebee-status"]
+	path = .yadm/bumblebee-status
+	url = https://github.com/0xDEAD/bumblebee-status.git
