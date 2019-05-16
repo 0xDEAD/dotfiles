@@ -169,7 +169,7 @@ workspace_auto_back_and_forth yes
 # window switcher
 #bindsym $mod+Tab exec --no-startup-id xfce4-terminal -e ~/.config/i3/window-switcher.sh --initial-title="window-switcher" --zoom=4
 #for_window [title="window-switcher"] fullscreen, floating enable, sticky enable
-bindsym $mod+Tab exec --no-startup-id ~/src/tools/minos-desktop-tools/tools/dmenu-i3-window-jumper
+bindsym $mod+Tab exec --no-startup-id ~/.local/bin/dmenu-i3-window-jumper
 
 
 # custom shortcuts
