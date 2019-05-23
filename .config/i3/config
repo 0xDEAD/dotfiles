@@ -135,7 +135,7 @@ bar {
 }
 
 # window switcher
-bindsym $mod+Tab exec --no-startup-id ~/.local/bin/dmenu-i3-window-jumper
+bindsym $mod+Tab exec --no-startup-id rofi -show window -font "mono 20"
 
 # custom shortcuts
 bindsym $mod+b exec ~/.local/bin/browser
