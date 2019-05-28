@@ -101,9 +101,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+shift+e exec --no-startup-id ~/src/tools/minos-desktop-tools/tools/dmenu-session
 
 # tint screen while resizing
 set $mod_def mode default; exec ~/bin/tint.sh off;
@@ -124,6 +121,23 @@ mode "resize" {
         bindsym $mod+r $mod_def
 }
 
+#  lock & powerctl
+bindsym $mod+shift+e mode "$mode_system"
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    set $lockscreen betterlockscreen -l dim && sleep 1
+    bindsym l exec --no-startup-id $lockscreen, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $lockscreen && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $lockscreen && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 # workspace- + status-bar
 bar {
         status_command /home/matthias/.yadm/bumblebee-status/bumblebee-status -m title cpu memory nic docker_ps sensors nvidiagpu pasink pasource weather datetime gmail -p memory.format="{used}" nic.states="^down" time.format="%H:%M" weather.showcity=false nvidiagpu.format="{temp}°C" datetime.format="%d.%m %H:%M" -t gruvbox-powerline-light
@@ -137,7 +151,6 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window -font "mono 20"
 bindsym $mod+b exec ~/.local/bin/browser
 bindsym $mod+g exec google-chrome-stable
 bindsym $mod+p exec pavucontrol
-bindsym $mod+Shift+l exec betterlockscreen -l dim
 
 # move some apps to dedicated workspaces
 assign [class="Pidgin"] $ws9
