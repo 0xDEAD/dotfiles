@@ -1,2 +1,4 @@
 #!/bin/sh
 yadm submodule update --recursive --init
+rm -f ~/.yadm/oh-my-zsh/custom/themes/powerlevel10k
+ln -s ~/.yadm/powerlevel10k ~/.yadm/oh-my-zsh/custom/themes/powerlevel10k

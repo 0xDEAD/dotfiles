@@ -4,3 +4,6 @@
 [submodule ".yadm/bumblebee-status"]
 	path = .yadm/bumblebee-status
 	url = https://github.com/0xDEAD/bumblebee-status.git
+[submodule ".yadm/powerlevel10k"]
+	path = .yadm/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
