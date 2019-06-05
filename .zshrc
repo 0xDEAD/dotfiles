@@ -101,7 +101,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias open="xdg-open"
 alias f=find
-alias ls=lsd
+alias ls="noglob lsd"
 alias vi=vim
 
 
