@@ -62,7 +62,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt docker extract gpg-agent sudo systemd wd zsh-navigation-tools sudo)
+plugins=(git git-prompt docker extract gpg-agent sudo systemd wd zsh-navigation-tools sudo colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,8 +103,12 @@ alias open="xdg-open"
 alias f=find
 alias ls="noglob lsd"
 alias vi=vim
+alias e=$EDITOR
 
+# git aliases
+alias citool="git citool &"
 
-# kittens
-alias icat="kitty +kitten icat"
+export BROWSER=~/.local/bin/browser
+export NINJA_STATUS="[%f/%t %c/s] "
+
 source ~/.purepower
