@@ -1,0 +1,4 @@
+rofi.modi:        ssh,drun,window,combi
+rofi.combi-modi:  drun,ssh
+rofi.theme:       fancy
+rofi.font:        mono 20

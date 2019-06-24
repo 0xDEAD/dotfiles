@@ -23,7 +23,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+f fullscreen toggle
 
 # program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run -font "mono 20"
+bindsym $mod+d exec --no-startup-id rofi -show combi
 
 # change focus
 bindsym $mod+Left focus left
@@ -145,7 +145,7 @@ bar {
 }
 
 # window switcher
-bindsym $mod+Tab exec --no-startup-id rofi -show window -font "mono 20"
+bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # custom shortcuts
 bindsym $mod+b exec ~/.local/bin/browser
