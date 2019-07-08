@@ -99,8 +99,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # tint screen while resizing
-set $mod_def mode default; exec ~/bin/tint.sh off;
-set $exec_red_screen exec ~/bin/tint.sh on 4:1:1;
+set $mod_def mode default; exec ~/.local/bin/tint.sh off;
+set $exec_red_screen exec ~/.local/bin/tint.sh on 4:1:1;
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"; $exec_red_screen;
