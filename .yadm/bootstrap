@@ -1,4 +1,18 @@
 #!/bin/sh
+
 yadm submodule update --recursive --init
+
 rm -f ~/.yadm/oh-my-zsh/custom/themes/powerlevel10k
 ln -s ~/.yadm/powerlevel10k ~/.yadm/oh-my-zsh/custom/themes/powerlevel10k
+
+for PACKAGE in $(cat packages);
+do
+  if [[ "$PACKAGE" == "$(pacman -Q | sed 's/ .*//' | grep ^$PACKAGE$)" ]];
+  then
+    # $PACKAGE alreaady installed, nothing to do
+    :
+  else
+    echo "$PACKAGE missing"
+    yaourt -S $PACKAGE
+  fi
+done
