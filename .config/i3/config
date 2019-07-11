@@ -119,11 +119,11 @@ mode "resize" {
 
 #  lock & powerctl
 bindsym $mod+shift+e mode "$mode_system"
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l)ock, l(o)gout, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     set $lockscreen betterlockscreen -l dim && sleep 1
     bindsym l exec --no-startup-id $lockscreen, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym o exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $lockscreen && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $lockscreen && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
