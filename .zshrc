@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/matthias/.yadm/oh-my-zsh"
@@ -62,7 +62,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt docker extract gpg-agent sudo systemd wd zsh-navigation-tools sudo colorize)
+plugins=(git git-prompt docker extract gpg-agent sudo systemd wd zsh-navigation-tools sudo colorize common-aliases)
+
+GIT_AUTO_FETCH_INTERVAL=300 # 5min
 
 source $ZSH/oh-my-zsh.sh
 

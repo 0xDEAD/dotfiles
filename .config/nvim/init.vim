@@ -7,3 +7,7 @@ call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
 set modifiable
+
+set ignorecase
+set smartcase
+set incsearch
